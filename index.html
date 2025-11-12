@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our 20‑Year Anniversary — Countdown</title>
-  <meta name="description" content="A simple, elegant countdown page to our 20‑year wedding anniversary, with a space for a summary video." />
-  <meta property="og:title" content="Our 20‑Year Anniversary — Countdown" />
-  <meta property="og:description" content="Counting down to a special milestone." />
+  <title>Paulo & Ana — 20‑Year Anniversary Countdown</title>
+  <meta name="description" content="Countdown to Paulo & Ana’s 20‑year wedding anniversary, with a summary video and progress from their wedding day." />
+  <meta property="og:title" content="Paulo & Ana — 20‑Year Anniversary Countdown" />
+  <meta property="og:description" content="Counting down from 12 March 2006 to 12 March 2026." />
   <meta property="og:type" content="website" />
   <style>
     :root {
@@ -14,52 +14,73 @@
       --card: #171a34;
       --text: #e8ecff;
       --muted: #b9c0ff;
-      --accent: #7aa2ff;
-      --accent-2: #9bf1ff;
+      --accent: #f5b3ff;
+      --accent-2: #ffdc9b;
     }
     html, body { height: 100%; }
     body {
-      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 80% -20%, rgba(154, 209, 255, 0.15), transparent 60%),
-                  radial-gradient(900px 600px at -10% 120%, rgba(123, 111, 255, 0.18), transparent 60%),
-                  var(--bg);
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 800px at 80% -20%, rgba(245, 179, 255, 0.18), transparent 60%),
+        radial-gradient(900px 600px at -10% 120%, rgba(255, 220, 155, 0.22), transparent 60%),
+        var(--bg);
       color: var(--text);
-      display: grid; place-items: center;
+      display: grid;
+      place-items: center;
     }
     .container { width: min(1100px, 92vw); padding: 28px; }
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px; padding: 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.45);
+      backdrop-filter: blur(10px);
     }
-    h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px; letter-spacing: 0.4px; }
+    h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 8px; letter-spacing: 0.5px; }
     .subtitle { color: var(--muted); margin: 0 0 18px; }
     .flex { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
     .timer { display: grid; grid-template-columns: repeat(4, minmax(110px,1fr)); gap: 14px; margin-top: 14px; }
-    .unit { background: var(--card); border-radius: 18px; padding: 16px; text-align: center; border: 1px solid rgba(255,255,255,0.08); }
+    .unit { background: var(--card); border-radius: 18px; padding: 16px; text-align: center; border: 1px solid rgba(255,255,255,0.12); }
     .num { font-variant-numeric: tabular-nums; font-size: clamp(28px, 6vw, 48px); font-weight: 700; line-height: 1; }
     .label { margin-top: 6px; color: var(--muted); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
-    .progress { margin-top: 18px; background: rgba(255,255,255,0.08); height: 10px; border-radius: 999px; overflow: hidden; }
+    .progress { margin-top: 18px; background: rgba(255,255,255,0.12); height: 10px; border-radius: 999px; overflow: hidden; }
     .bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 0.8s ease; }
 
     .details { margin-top: 18px; color: var(--muted); font-size: 14px; }
-    .row { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
+    .row { margin-top: 22px; display: grid; grid-template-columns: 1fr; gap: 14px; }
     @media (min-width: 800px) { .row { grid-template-columns: 1.2fr 0.8fr; } }
 
-    .panel { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 18px; }
+    .panel { background: var(--card); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 18px; }
     .panel h3 { margin: 0 0 10px; font-size: 18px; }
     .small { color: var(--muted); font-size: 13px; }
 
     .controls { display: grid; gap: 10px; margin-top: 8px; }
     .controls input, .controls button, .controls textarea {
-      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
-      color: var(--text); padding: 10px 12px; border-radius: 12px; font-size: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.26);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 14px;
     }
     .controls button { cursor: pointer; font-weight: 600; }
-    .controls button.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b0f24; border: none; }
+    .controls button.primary {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #241020;
+      border: none;
+    }
 
-    .video-frame { aspect-ratio: 16/9; background: #0b0f24; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; display: grid; place-items: center; }
+    .video-frame {
+      aspect-ratio: 16/9;
+      background: #0b0f24;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
     iframe, video { width: 100%; height: 100%; display: block; }
 
     .note { margin-top: 10px; font-size: 12px; color: var(--muted); }
@@ -72,258 +93,4 @@
     <div class="card">
       <div class="flex" style="justify-content: space-between; align-items: start; gap: 16px;">
         <div>
-          <h1 id="heading">20‑Year Anniversary Countdown</h1>
-          <p class="subtitle" id="sub">Counting down to our 20‑year wedding anniversary.</p>
-        </div>
-        <div class="small" style="text-align:right">
-          <div>Target date: <span id="targetDateTxt">—</span></div>
-          <div>Timezone: <span id="tzTxt">—</span></div>
-        </div>
-      </div>
-
-      <div class="timer" id="timer">
-        <div class="unit"><div class="num" id="days">—</div><div class="label">Days</div></div>
-        <div class="unit"><div class="num" id="hours">—</div><div class="label">Hours</div></div>
-        <div class="unit"><div class="num" id="minutes">—</div><div class="label">Minutes</div></div>
-        <div class="unit"><div class="num" id="seconds">—</div><div class="label">Seconds</div></div>
-      </div>
-
-      <div class="progress" aria-label="Progress towards the date"><div class="bar" id="bar"></div></div>
-      <div class="details" id="detailTxt"></div>
-
-      <div class="row">
-        <div class="panel">
-          <h3>Summary Video</h3>
-          <div class="video-frame" id="videoFrame">
-            <div class="small">Add a video file or paste a YouTube/Vimeo link below.</div>
-          </div>
-          <div class="controls">
-            <input type="url" id="videoUrl" placeholder="Paste a YouTube/Vimeo URL or direct .mp4 link" />
-            <input type="file" id="videoFile" accept="video/*" />
-            <button class="primary" id="applyVideo">Add / Update Video</button>
-            <div class="note">Tip: A private/unlisted YouTube link is an easy way to share without downloads.
-            </div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Settings</h3>
-          <div class="controls">
-            <label class="small">Anniversary title</label>
-            <input id="titleInput" placeholder="e.g., Paulo & Ana — 20 Years" />
-
-            <label class="small">20‑year anniversary date (local)</label>
-            <input id="dateInput" type="datetime-local" />
-
-            <label class="small">Original wedding date (optional, for progress)</label>
-            <input id="startInput" type="date" />
-
-            <button id="saveBtn" class="primary">Save Settings</button>
-            <button id="shareBtn">Copy Shareable Link</button>
-            <div class="note">You can also set values via URL parameters: <code>?title=...&date=YYYY-MM-DDTHH:mm&start=YYYY-MM-DD&video=URL</code></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        Made with love for <span class="names" id="namesFoot">us</span> — <span id="todayTxt"></span>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // ===== Utilities =====
-    const qs = (s) => document.querySelector(s);
-    const qsp = (k) => new URLSearchParams(location.search).get(k);
-
-    function fmtDate(d) {
-      try { return new Intl.DateTimeFormat(undefined, { dateStyle: 'full', timeStyle: 'short' }).format(d); } catch { return d.toString(); }
-    }
-
-    function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
-
-    // ===== Defaults (edit these lines to hardcode your values) =====
-    // TODO: Set your actual 20-year anniversary date here (local time),
-    // or pass it via the URL as ?date=YYYY-MM-DDTHH:mm
-    const DEFAULT_TITLE = '20‑Year Anniversary Countdown';
-    const DEFAULT_DATE  = '2026-06-01T12:00'; // ← REPLACE with your real date/time
-    const DEFAULT_START = '';                  // optional: your original wedding date YYYY-MM-DD
-
-    // ===== State =====
-    let targetDate = new Date(qsp('date') || DEFAULT_DATE);
-    let startDateStr = qsp('start') || DEFAULT_START;
-    let startDate = startDateStr ? new Date(startDateStr) : null;
-    let title = decodeURIComponent(qsp('title') || DEFAULT_TITLE);
-
-    // Video via URL param
-    const videoParam = qsp('video');
-
-    // Prefill controls
-    qs('#titleInput').value = title;
-    qs('#dateInput').value = (qsp('date') || DEFAULT_DATE).slice(0,16);
-    if (startDateStr) qs('#startInput').value = startDateStr;
-
-    // Heading
-    qs('#heading').textContent = title;
-    qs('#sub').textContent = 'Counting down to our 20‑year wedding anniversary.';
-
-    // Render TZ/Date
-    qs('#targetDateTxt').textContent = fmtDate(targetDate);
-    qs('#tzTxt').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || 'local';
-    qs('#todayTxt').textContent = fmtDate(new Date());
-
-    // ===== Countdown =====
-    let timerId = null;
-    function updateCountdown(){
-      const now = new Date();
-      const diff = targetDate - now;
-      const past = diff <= 0;
-
-      const daysEl = qs('#days');
-      const hoursEl = qs('#hours');
-      const minutesEl = qs('#minutes');
-      const secondsEl = qs('#seconds');
-
-      if (past) {
-        daysEl.textContent = '0';
-        hoursEl.textContent = '0';
-        minutesEl.textContent = '0';
-        secondsEl.textContent = '0';
-        qs('#detailTxt').innerHTML = '🎉 It\'s here! Happy 20‑year anniversary!';
-        confetti();
-        if (timerId) clearInterval(timerId);
-        return;
-      }
-
-      const secs = Math.floor(diff/1000);
-      const days = Math.floor(secs/86400);
-      const hours = Math.floor((secs % 86400)/3600);
-      const minutes = Math.floor((secs % 3600)/60);
-      const seconds = secs % 60;
-
-      daysEl.textContent = String(days);
-      hoursEl.textContent = String(hours).padStart(2,'0');
-      minutesEl.textContent = String(minutes).padStart(2,'0');
-      secondsEl.textContent = String(seconds).padStart(2,'0');
-
-      // Progress from startDate to targetDate, if startDate is provided
-      if (startDate && startDate < targetDate) {
-        const total = targetDate - startDate;
-        const done = now - startDate;
-        const pct = clamp((done/total)*100, 0, 100);
-        qs('#bar').style.width = pct.toFixed(2) + '%';
-        qs('#detailTxt').textContent = `Progress from ${startDate.toISOString().slice(0,10)} to the big day: ${pct.toFixed(2)}%`;
-      } else {
-        const total = targetDate - now;
-        // Use a faux progress that approaches 100% as we near the date (for visual interest)
-        const horizon = 365*24*60*60*1000; // 1 year window
-        const pct = clamp(100 - (total/horizon)*100, 0, 100);
-        qs('#bar').style.width = pct.toFixed(2) + '%';
-        qs('#detailTxt').textContent = `Counting down to ${fmtDate(targetDate)}`;
-      }
-    }
-
-    timerId = setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    // ===== Video logic =====
-    function setIframe(url){
-      const frame = document.createElement('iframe');
-      frame.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
-      frame.setAttribute('allowfullscreen', '');
-      frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-      frame.src = url;
-      return frame;
-    }
-
-    function setVideoSrc(urlOrBlob){
-      const vf = qs('#videoFrame');
-      vf.innerHTML = '';
-
-      const url = typeof urlOrBlob === 'string' ? urlOrBlob : URL.createObjectURL(urlOrBlob);
-      const isYouTube = /youtu\.be|youtube\.com/.test(url);
-      const isVimeo = /vimeo\.com/.test(url);
-
-      if (isYouTube) {
-        const ytIdMatch = url.match(/[?&]v=([^&]+)|youtu\.be\/([^?&]+)/);
-        const vid = ytIdMatch ? (ytIdMatch[1] || ytIdMatch[2]) : '';
-        const embed = vid ? `https://www.youtube.com/embed/${vid}` : url;
-        vf.appendChild(setIframe(embed));
-      } else if (isVimeo) {
-        const idMatch = url.match(/vimeo\.com\/(\d+)/);
-        const vid = idMatch ? idMatch[1] : '';
-        const embed = vid ? `https://player.vimeo.com/video/${vid}` : url;
-        vf.appendChild(setIframe(embed));
-      } else {
-        const video = document.createElement('video');
-        video.controls = true;
-        video.preload = 'metadata';
-        video.src = url;
-        vf.appendChild(video);
-      }
-    }
-
-    if (videoParam) setVideoSrc(videoParam);
-
-    qs('#applyVideo').addEventListener('click', () => {
-      const url = qs('#videoUrl').value.trim();
-      const file = qs('#videoFile').files[0];
-      if (file) { setVideoSrc(file); }
-      else if (url) { setVideoSrc(url); }
-    });
-
-    // ===== Settings & sharing =====
-    qs('#saveBtn').addEventListener('click', () => {
-      const newTitle = qs('#titleInput').value.trim() || DEFAULT_TITLE;
-      const newDate = qs('#dateInput').value || DEFAULT_DATE;
-      const newStart = qs('#startInput').value || '';
-
-      title = newTitle;
-      targetDate = new Date(newDate);
-      startDate = newStart ? new Date(newStart) : null;
-
-      qs('#heading').textContent = title;
-      qs('#targetDateTxt').textContent = fmtDate(targetDate);
-      updateCountdown();
-    });
-
-    qs('#shareBtn').addEventListener('click', async () => {
-      const params = new URLSearchParams();
-      params.set('title', encodeURIComponent(qs('#titleInput').value.trim() || DEFAULT_TITLE));
-      params.set('date', qs('#dateInput').value || DEFAULT_DATE);
-      const s = qs('#startInput').value; if (s) params.set('start', s);
-      const v = qs('#videoUrl').value.trim(); if (v) params.set('video', v);
-      const shareUrl = `${location.origin}${location.pathname}?${params.toString()}`;
-      try {
-        await navigator.clipboard.writeText(shareUrl);
-        alert('Link copied to clipboard!');
-      } catch (e) {
-        prompt('Copy this URL:', shareUrl);
-      }
-    });
-
-    // ===== Simple confetti when the day arrives =====
-    function confetti(){
-      const n = 120;
-      for (let i=0; i<n; i++) {
-        const span = document.createElement('span');
-        span.style.position = 'fixed';
-        span.style.left = Math.random()*100 + 'vw';
-        span.style.top = '-20px';
-        span.style.width = span.style.height = (4 + Math.random()*6) + 'px';
-        span.style.background = `hsl(${Math.random()*360}, 90%, 65%)`;
-        span.style.opacity = '0.9';
-        span.style.borderRadius = '1px';
-        span.style.transform = `rotate(${Math.random()*360}deg)`;
-        span.style.transition = 'transform 3s ease, top 3s cubic-bezier(.25,.8,.25,1)';
-        document.body.appendChild(span);
-        requestAnimationFrame(() => {
-          span.style.top = '110vh';
-          span.style.transform += ` translateY(${80 + Math.random()*40}vh) rotate(${Math.random()*720}deg)`;
-        });
-        setTimeout(() => span.remove(), 3200);
-      }
-    }
-  </script>
-</body>
-</html>
+          <h1 id="heading
