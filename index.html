@@ -160,11 +160,13 @@
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.16);
       overflow: hidden;
+      max-width: 100%;
+      margin-top: 10px;
     }
 
     video {
       width: 100%;
-      height: 100%;
+      height: auto;        /* important: avoid overflow on some mobiles */
       display: block;
     }
 
@@ -180,20 +182,20 @@
   <div class="container">
     <div class="card">
       <header class="header-top" style="text-align:left; padding-bottom:12px;">
-  <div style="width:100%;">
-    <h1 style="margin:0; font-size:clamp(1.8rem,5vw,2.4rem); line-height:1.2; font-weight:600;">
-      Ana and Paulo
-    </h1>
-    <div style="font-size:0.9rem; opacity:0.85;">
-      20th Wedding Anniversary Countdown
-    </div>
-  </div>
+        <div style="width:100%;">
+          <h1 style="margin:0; font-size:clamp(1.8rem,5vw,2.4rem); line-height:1.2; font-weight:600;">
+            Ana and Paulo
+          </h1>
+          <div style="font-size:0.9rem; opacity:0.85;">
+            20th Wedding Anniversary Countdown
+          </div>
+        </div>
 
-  <div class="meta" style="margin-top:12px;">
-    <div id="targetTxt"></div>
-    <div id="tzTxt"></div>
-  </div>
-</header>
+        <div class="meta" style="margin-top:12px;">
+          <div id="targetTxt"></div>
+          <div id="tzTxt"></div>
+        </div>
+      </header>
 
       <!-- Countdown Display -->
       <section class="timer" aria-label="Countdown to 20-year anniversary">
@@ -216,11 +218,12 @@
           preload="metadata"
           controlsList="nodownload"
           oncontextmenu="return false;"
-          style="width:100%;height:100%;"
         >
           <source src="TwentyYearAniversary_web.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
       </div>
+
       <div class="footer">Casa Elysiana Lda</div>
     </div>
   </div>
@@ -268,6 +271,7 @@
       document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
       document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
 
+      // If you want progress bar to show percentage, uncomment below:
       // const total = TARGET_DATE - START_DATE;
       // const done = now - START_DATE;
       // const pct = clamp((done/total)*100, 0, 100);
